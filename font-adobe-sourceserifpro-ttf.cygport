@@ -1,0 +1,24 @@
+inherit font
+
+NAME="font-adobe-sourceserifpro-ttf"
+VERSION=1.014
+RELEASE=1
+CATEGORY="X11"
+SUMMARY="Adobe SourceSerifPro fonts"
+DESCRIPTION="Source Serif is a set of OpenType fonts that have been designed to
+work well in user interface (UI) environments, as well as in text setting for
+screen and print."
+HOMEPAGE="http://sourceforge.net/projects/sourceserifpro.adobe/"
+SRC_URI="mirror://sourceforge/sourceserifpro.adobe/SourceSerifPro_FontsOnly-${VERSION}.zip"
+SRC_DIR="source-serif-pro-${VERSION}R"
+
+src_compile() { :; }
+
+src_install() {
+	cd ${S}
+	fontinto OTF
+	dofont OTF/*
+	fontinto TTF
+	dofont TTF/*
+	dodoc *.html
+}
