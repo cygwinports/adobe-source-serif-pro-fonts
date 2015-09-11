@@ -1,16 +1,16 @@
 inherit font
 
 NAME="adobe-source-serif-pro-fonts"
-VERSION=1.014
-RELEASE=2
+VERSION=1.017
+RELEASE=1
 CATEGORY="X11"
 SUMMARY="Adobe SourceSerifPro fonts"
 DESCRIPTION="Source Serif is a set of OpenType fonts that have been designed to
 work well in user interface (UI) environments, as well as in text setting for
 screen and print."
-HOMEPAGE="http://sourceforge.net/projects/sourceserifpro.adobe/"
+HOMEPAGE="https://adobe-fonts.github.io/source-serif-pro/"
 SRC_URI="
-	mirror://sourceforge/sourceserifpro.adobe/SourceSerifPro_FontsOnly-${VERSION}.zip
+	https://github.com/adobe-fonts/source-serif-pro/archive/${VERSION}R/source-serif-pro-${VERSION}R.tar.gz
 	63-adobe-source-serif-pro.conf
 "
 SRC_DIR="source-serif-pro-${VERSION}R"
